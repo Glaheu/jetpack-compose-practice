@@ -7,9 +7,8 @@
 * **Immutability and Data Integrity:** Established the use of `val` and `.copy()` as structural safeguards to prevent unintended data mutation and ensure consistency across the application logic.
 * **Polymorphism via Interfaces:** Utilized interfaces to create "contracts" for code, allowing for decoupled logic and more flexible implementation details.
 
-### 🧱 Core Patterns Mastered
+### 🧱 Core Patterns Learnt
 * **Unidirectional Data Flow (UDF):** Implemented the "State Flows Down, Events Flow Up" pattern to ensure a predictable UI lifecycle.
-
 * **State Hoisting:** Practiced moving state to caller components to create "stateless" composables, which increases reusability and simplifies testing.
 * **Slot API & Lambdas:** Leveraged Kotlin’s trailing lambda syntax to create flexible UI "slots," allowing components to accept other composables as parameters.
 * **Lazy Containerization:** Compared `LazyColumn` and `LazyVerticalGrid` to efficiently render large, scrollable datasets by only composing items currently visible on screen.

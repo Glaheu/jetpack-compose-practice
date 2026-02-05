@@ -155,3 +155,27 @@
 * **Time Invested:** 5 hours
 * **Phase:** 1 (Kotlin Fundamentals & Android Basics)
 * **Goal Alignment:** Strengthening UI layout fundamentals and OO principles required for Junior/Intern roles in Singapore.
+
+## [2026-02-05] Day 8: Material Theming & Data Structures
+
+**Pathway:** Android Basics in Compose - Unit 3, Pathway 3
+**Codelab:** [Material Theming with Jetpack Compose](https://developer.android.com/codelabs/basic-android-kotlin-compose-material-theming)
+**Kotlin Resource:** [Data Classes and Destructuring](https://typealias.com/start/kotlin-data-classes-and-destructuring/)
+
+### 🛠️ Technical Implementation
+* **Material Design 3 (M3):** Integrated a comprehensive design system using `MaterialTheme`, focusing on the three pillars: `colorScheme`, `typography`, and `shapes`.
+* **Dynamic Color & Theming:** Implemented dark theme support and customized the `Color.kt` and `Theme.kt` files to ensure UI consistency across different device settings.
+* **Data Classes:** Leveraged `data class` for model layers to benefit from auto-generated `equals()`, `hashCode()`, and `copy()` functions.
+* **Destructuring:** Practiced destructuring declarations to unpack data class properties into separate variables efficiently (e.g., `val (name, age) = dog`).
+* **OOP Inheritance Reinforcement:** * Reinforced that `abstract` classes serve as incomplete blueprints that *must* be extended.
+    * Used `open` to explicitly opt-out of Kotlin's default `final` class behavior, allowing for controlled inheritance and method overriding.
+
+### 🧠 Key Takeaways
+* **Design Consistency:** Understood how to use `MaterialTheme.colorScheme.primary` instead of hardcoded hex values to maintain a professional, adaptable UI.
+* **Boilerplate Reduction:** Recognized how `data classes` simplify data handling in Kotlin, making the codebase cleaner and more maintainable for large-scale projects.
+* **Visual Hierarchy:** Used `clip()` and `MaterialTheme.shapes` to transform standard images into rounded UI elements consistent with modern Android standards.
+
+### 📈 Progress Tracking
+* **Time Invested:** 6 hours
+* **Phase:** 1 (Kotlin Fundamentals & Android Basics)
+* **Goal Alignment:** Learaning Material 3 and clean data modeling.
