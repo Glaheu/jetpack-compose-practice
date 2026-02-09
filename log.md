@@ -272,19 +272,26 @@
 **Kotlin Resource:** [State in Jetpack Compose](https://developer.android.com/develop/ui/compose/state) / [ViewModel & StateFlow](https://developer.android.com/topic/libraries/architecture/viewmodel)
 
 ### 🛠️ Technical Implementation
-* **Derived State Optimization:** Implemented automatic calculations using `get()` properties in `UiState` classes. This removed the need for manual math inside ViewModel functions, ensuring a single source of truth for computed values (e.g., `totalPrice`, `statusMessage`).
-* **Progression Systems:** Developed level-based logic using Kotlin collection functions like `.findLast`. Applied this to map user progress (XP/Clicks) against a list of thresholds to trigger automatic rank or item updates.
-* **Codelab Refactoring:** Reconstructed the "Dessert Clicker" app by migrating legacy inline state into a dedicated `ViewModel` and `UiState` structure.
-* **Architectural Hardening (Library Case):** * Implemented **Conditional Guarding** in the `update` block to prevent invalid state transitions (e.g., borrowing beyond membership limits).
-    * Utilized `coerceAtLeast(0)` for boundary handling in state decrements.
-    * Shifted data initialization to the ViewModel `init` block to ensure loose coupling between the `UiState` and `DataSource`.
-    
+* **Derived State Optimization:** Mastered the use of `get()` properties in `UiState` for automatic calculations (`subtotal`, `tax`, `currentPowerUsage`). This ensures the UI never performs manual math and relies on a "Single Source of Truth."
+* **Immutable List Manipulation:** * Implemented item updates using `.map { if (match) copy() else it }` to ensure thread-safe state transitions and trigger Recomposition.
+    * Utilized `.filter { }` for dynamic item removal while maintaining state immutability.
+* **Architectural Hardening:**
+    * **Conditional Guarding:** Implemented logic gates to block actions (e.g., Power Budgeting in Smart Home) before state updates occur.
+    * **Qualified Returns:** Utilized `return@update` for early-exit logic to handle null safety and invalid user actions gracefully.
+    * **Bulk Updates:** Developed functions to update multiple objects simultaneously (e.g., `turnOffAll(type)`) without losing the rest of the list data.
+
 ### 🧠 Key Takeaways
-* **Dumb UI Pattern:** Confirmed that a robust architecture keeps Composables "logic-free." The UI should only know how to display what is in the `UiState` and notify the ViewModel of user actions.
-* **State Encapsulation:** naming conventions matter—State variables should describe the "What" (e.g., `uiState`), not the "Where" (e.g., `viewModel`).
-* **Testable Architecture:** Separation of concerns (Logic vs. UI) is what makes Unit Testing possible. Testing the "brain" without the "face" (UI) makes for faster, more reliable builds.
+* **The "Copy" Rule:** Solidified the understanding that modifying an object's property directly (mutation) will not trigger a UI refresh. Replacing the entire state object via `copy()` is mandatory for Compose.
+* **Functional Programming:** Shifted from manual iteration to functional operators like `.any`, `.sumOf`, `.count`, and `.find` for cleaner, self-documenting code.
+* **Logic vs. Side Effects:** Learned to handle state changes by calculating the *next* possible state rather than modifying the current one, a core principle for high-reliability apps like Google Wallet.
 
 ### 📈 Progress Tracking
-* **Time Invested:** 5 hours
+* **Time Invested:** 7.5 hours
 * **Phase:** 1 (Kotlin Fundamentals & Android Basics)
-* **Goal Alignment:** Practised 5 different ViewModel implementations including the codelabs Dessert Clicker.
+* **Goal Alignment:** Completed **6 distinct ViewModel implementations**:
+    1. *Dessert Clicker* (State Migration/Refactoring)
+    2. *Laundry Timer* (Simple Counters)
+    3. *Gym Leveler* (Threshold & Rank Logic)
+    4. *Library Portal* (Conditional Guards)
+    5. *Coffee Shop POS* (Complex List Manipulation)
+    6. *Smart Home Manager* (Bulk Updates & Power Budgeting)

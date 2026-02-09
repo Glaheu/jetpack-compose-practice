@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.coffeeshoppos"
+    namespace = "com.example.smarthomedevicemanager"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.example.coffeeshoppos"
+        applicationId = "com.example.smarthomedevicemanager"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -47,8 +47,8 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     testImplementation(libs.junit)
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
     androidTestImplementation(libs.androidx.junit)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
