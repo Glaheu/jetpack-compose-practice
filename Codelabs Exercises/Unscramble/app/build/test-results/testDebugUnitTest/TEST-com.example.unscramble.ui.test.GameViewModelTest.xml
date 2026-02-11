@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.unscramble.ui.test.GameViewModelTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-02-08T11:42:48" hostname="DESKTOP-QKBAQFJ" time="0.224">
-  <properties/>
-  <testcase name="gameViewModel_CorrectWordGuessed_ScoreUpdatedAndErrorFlagUnset" classname="com.example.unscramble.ui.test.GameViewModelTest" time="0.223"/>
-  <testcase name="gameViewModel_WordSkipped_ScoreUnchangedAndWordCountIncreased" classname="com.example.unscramble.ui.test.GameViewModelTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
