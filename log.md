@@ -328,3 +328,33 @@
 * **Phase:** 2 (Android Basics with Compose & Architecture)
 * **Goal Alignment:** * Completed **Campus Pass Manager**
     * Successfully migrated from the official "Cupcake" tutorial logic to the 2026 industry-standard Type-Safe approach.
+
+---
+
+## [2026-02-11] Day 14: Advanced State Management & Scaffold Architecture
+
+**Pathway:** Android Basics in Compose - Unit 4 (Pathway 2)
+**Codelab:** [Practice: Navigation in Jetpack Compose](https://developer.android.com/codelabs/basic-android-kotlin-compose-practice-navigation)
+
+### 🛠️ Technical Implementation
+* **Composite UI Layout:**
+    * Built a **Dashboard Screen** that integrates a horizontal category filter (`LazyRow`) and a vertical transaction history (`LazyColumn`).
+    * Optimized performance by nesting the `LazyRow` inside a `LazyColumn` item block, preventing the common "Infinite Height" crash associated with nested scrollable components.
+* **Scaffold & Inset Mastery:**
+    * Resolved issues with missing `TopAppBar` and `FloatingActionButton` by correctly hoisting the `innerPadding` from the `Scaffold` to the `NavigationHost`.
+* **Robust Input Validation:**
+    * Engineered a "String-First" state pattern for the **Add Transaction Screen** to solve the "decimal backspace" bug and cursor jumping.
+    * Implemented numeric validation using `toDoubleOrNull()` and character filtering to prevent `NumberFormatException` crashes during text entry.
+* **Component-Level Design:**
+    * Utilized `FilterChip` components to manage a dynamic `Set<Category>` within the `UiState`.
+    * Refactored `TransactionCard` to use `Modifier.weight()` for text wrapping, ensuring long transaction names do not push prices off-screen.
+
+### 🧠 Key Takeaways
+* **String-to-Double Paradox:** Discovered that UI state for numeric inputs should remain as `Strings` to preserve "incomplete" states (like trailing decimal points), converting to numeric types only for business logic.
+* **Scaffold Padding Chain:** Learned that the `innerPadding` provided by the `Scaffold` is a "contract" that must be passed all the way down to the screen-level Composables to maintain UI visibility.
+* **Arrangement vs. Alignment:** Clarified the use of `Arrangement.spacedBy()` for consistent gaps and `Alignment.CenterVertically` for group positioning within containers.
+
+### 📈 Progress Tracking
+* **Time Invested:** 6 hours
+* **Phase:** 2 (Android Basics with Compose & Architecture)
+* **Goal Alignment:** * Successfully developed the core UI and navigation for the **Expense Tracker** practise project.
