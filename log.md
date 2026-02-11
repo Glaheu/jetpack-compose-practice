@@ -355,6 +355,6 @@
 * **Arrangement vs. Alignment:** Clarified the use of `Arrangement.spacedBy()` for consistent gaps and `Alignment.CenterVertically` for group positioning within containers.
 
 ### 📈 Progress Tracking
-* **Time Invested:** 6 hours
+* **Time Invested:** 5 hours
 * **Phase:** 2 (Android Basics with Compose & Architecture)
 * **Goal Alignment:** * Successfully developed the core UI and navigation for the **Expense Tracker** practise project.
